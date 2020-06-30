@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A PetToyCo proxy server - Nick</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js"></script>
+    <script crossorigin src="https://momentjs.com/downloads/moment.min.js"></script>
+
+    <script>
+      const { cookie } = document;
+      const itemId = cookie.split('=')[1];
+      const newHref = `product?itemID=${itemId}`;
+
+      window.history.pushState(null, '', newHref);
+    </script>
+  </head>
+  <body style="display: flex;">
+    <div style="width: 21.3%;"> </div>
+    <div id="REVIEWS_ATTACH_POINT"></div>
+    <div style="width: 21.3%;"> </div>
+  </body>
+  <script crossorigin src="http://127.0.0.1:3001/app.js" ></script>
+</html>
