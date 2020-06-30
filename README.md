@@ -23,6 +23,7 @@ To use this proxy server:
 1. Download each of the above repos (in the section "Related Projects". Each repo represents a service to this proxy) into its own unique directory. Then follow the instructions in each ReadMe - for each service - for how to seed a MongoDB instance running on your computer, with data. Also, follow the instructions for starting each of the service's servers.
 2.
 
+http://127.0.0.1:3000/SpecRunner.html?itemID=100
 
 ## Requirements
 

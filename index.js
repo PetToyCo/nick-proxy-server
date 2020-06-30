@@ -8,9 +8,9 @@ const server = express();
 server.use(morgan('dev'));
 server.use(cookieParser());
 
-server.use(serveStatic('client'));
+server.use(serveStatic('./client/'));
 
-server.get('/*', (req, res) => {
+server.get('/product', (req, res) => {
   const { itemID } = req.query;
   const itemIdNumber = Number.parseInt(itemID, 10);
 
