@@ -15,4 +15,6 @@ describe('The proxy server should correctly serve an index.html file that, in tu
       expect(innerHTML).to.equal('19');
     });
   });
+
+  //also add bad path tests
 });

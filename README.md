@@ -25,9 +25,9 @@ To use this proxy server:
 3. Visit any page that follows the form:
 http://127.0.0.1:3000/product?itemID='value 100 to 199 without the quotes'
 
-4. To run the tests, cisit the following link:
+4. To run the tests, visit the following link:
 http://127.0.0.1:3000/SpecRunner.html
-NOTE: as the page that loads tells you, you have to wait before the tests will run. This is to give the embedded iframe the chance to load the proxy's html file, followed by that htl file sending out get requests for te service components, followed by those components sending out requests for data.
+NOTE: as the page that loads tells you, you have to wait before the tests will run. This is to give the embedded iframe the chance to load the proxy's html file, followed by that html file sending out get requests for the service components, followed by those components sending out requests for data.
 
 ## Requirements
 
