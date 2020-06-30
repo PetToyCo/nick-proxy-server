@@ -9,13 +9,6 @@
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js"></script>
     <script crossorigin src="https://momentjs.com/downloads/moment.min.js"></script>
 
-    <script>
-      const { cookie } = document;
-      const itemId = cookie.split('=')[1];
-      const newHref = `product?itemID=${itemId}`;
-
-      window.history.pushState(null, '', newHref);
-    </script>
   </head>
   <body style="display: flex;">
     <div style="width: 21.3%;"> </div>
