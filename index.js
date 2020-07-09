@@ -12,7 +12,7 @@ server.get('/product', (req, res) => {
   const itemIdNumber = Number.parseInt(itemID, 10);
 
   if (itemIdNumber < 100 || itemIdNumber > 199 || itemIdNumber === undefined) {
-    res.status(404).send();
+    res.status(404).send('itemID invalid');
   } else {
     res.sendFile(`${__dirname}/client/index.html`);
   }
