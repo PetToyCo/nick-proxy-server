@@ -16,6 +16,44 @@ describe('The proxy server should correctly serve an index.html file that, in tu
     });
   });
 
+  describe('loading the ProductRecommendations service module such that', () => {
+    it('it has an element with the id "recommendation-submodule-customer"', () => {
+      const targetDOMelement = iframeDOM.getElementById('recommendation-submodule-customer');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+
+    it('it has an element with the id "recommendation-submodule-treat"', () => {
+      const targetDOMelement = iframeDOM.getElementById('recommendation-submodule-treat');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+
+    it('it has an element with the id "recommendation-submodule-pet"', () => {
+      const targetDOMelement = iframeDOM.getElementById('recommendation-submodule-pet');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+
+    it('it has an element with the id "PR-link-101" that is, itself, the hardcoded value for item 100', () => {
+      const targetDOMelement = iframeDOM.getElementById('PR-link-101');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+
+    it('it has an element with the id "PR-link-120" that is, itself, the hardcoded value for item 100', () => {
+      const targetDOMelement = iframeDOM.getElementById('PR-link-120');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+
+    it('it has an element with the id "PR-link-199" that is, itself, the hardcoded value for item 100', () => {
+      const targetDOMelement = iframeDOM.getElementById('PR-link-199');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+  });
+
   describe('loading the photo-gallery service module such that', () => {
     it('it has an element with the class "galleryMainImageDiv"', () => {
       const targetDOMelement = iframeDOM.getElementsByClassName('galleryMainImageDiv');

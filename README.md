@@ -6,8 +6,8 @@ Handles all reviews and review-related visuals for PetToyCo
   - https://github.com/PetToyCo/photo-gallery
   - https://github.com/PetToyCo/description_directions_attributes_
   - https://github.com/PetToyCo/mainTitle_price
-  - https://github.com/PetToyCo/Reviews
-  - https://github.com/PetToyCo/repo
+  - https://github.com/PetToyCo/reviews
+  - https://github.com/PetToyCo/ProductRecommendations
   - https://github.com/PetToyCo/repo
 
 ## Table of Contents
