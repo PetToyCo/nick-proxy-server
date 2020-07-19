@@ -1,0 +1,4 @@
+node_modules
+.git
+client/SpecRunner.html
+client/tests.js
