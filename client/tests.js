@@ -70,17 +70,47 @@ describe('The proxy server should correctly serve an index.html file that, in tu
   });
 
   describe('loading the description_directions_attributes service module such that', () => {
-    it('it has an element with the id "reviews-module"', () => {
+    it('it has an element with the id "indexComponent"', () => {
       const targetDOMelement = iframeDOM.getElementById('indexComponent');
 
       expect(targetDOMelement).to.not.be.null;
     });
 
-    it('it has an element with the id "item-value-reviews" that has inner HTML equal to 19, the hardcoded value for item 100', () => {
+    it('it has an element with the id "descriptionTab" that has inner HTML equal to "CatToys Spring-Loaded Mouse", the hardcoded value for item 100', () => {
       const targetDOMelement = iframeDOM.getElementById('descriptionTab');
       const { innerHTML } = targetDOMelement;
 
       expect(innerHTML).to.contain('CatToys Spring-Loaded Mouse');
+    });
+  });
+
+  describe('loading the mainTitle_price service module such that', () => {
+    it('it has an element with the id "priceSpan"', () => {
+      const targetDOMelement = iframeDOM.getElementById('priceSpan');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+
+    it('it has an element with the id "priceSpan" that has inner HTML equal to 12.99, the hardcoded value for item 100', () => {
+      const targetDOMelement = iframeDOM.getElementById('priceSpan');
+      const { innerHTML } = targetDOMelement;
+
+      expect(innerHTML).to.contain('12.99');
+    });
+  });
+
+  describe('loading the deliver-pickup service module such that', () => {
+    it('it has an element with the id "itemAvailability"', () => {
+      const targetDOMelement = iframeDOM.getElementById('itemAvailability');
+
+      expect(targetDOMelement).to.not.be.null;
+    });
+
+    it('it has an element with the class "deliverPickupItemPrice" that has inner HTML equal to 19, the hardcoded value for item 100', () => {
+      const targetDOMelement = iframeDOM.getElementsByClassName('deliverPickupItemPrice');
+      const { innerHTML } = targetDOMelement[0];
+
+      expect(innerHTML).to.contain('$12.99');
     });
   });
 });
