@@ -18,37 +18,69 @@
       id="MODAL_ATTACH_POINT"
       style="position: absolute; top: -20px; left: -20px; visibility: hidden; overflow: hidden; background-color: rgba(0, 0, 0, 0.4); z-index: 100;"
     ></div>
+    <div id="pop-up-mini-nav-bar" style="visibility: hidden; margin: 0px 0px 0px -10px; top: 0px; width: 1940px; height: 54px; position: fixed; display: flex; z-index: 50; background-color: white; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px 0px;">
+      <div style="display: flex; margin: 20px 20px 0px 0px;">
+        <img src="https://www.petco.com/wcsstore/PetcoStore/img/brand-logo.png" style="margin: 0px 39px 0px 0px; height: 33px; width: 150px;"></img>
+        <!-- <div style="margin: 0px 39px 0px 0px; height: 40px; width: 220px; background-image: url('NavBar.png'); background-position-x: 17px; background-position-y: 55px;"></div> -->
+        <div style="display: flex; margin: -1px 0px 0px 0px;">
+          <div style="font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; line-height: 25px; letter-spacing: 0.2px;">Shop by Pet</div>
+          <div style="margin: -8px 37px 0px 2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 57px; background-position-y: 45px; transform: rotate(90deg);"></div>
+        </div>
+        <div style="display: flex;">
+          <div style="font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; line-height: 25px; letter-spacing: 0.2px;">Brands</div>
+          <div style="margin: -8px 37px 0px 2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 57px; background-position-y: 45px; transform: rotate(90deg);"></div>
+        </div>
+        <div style="display: flex">
+          <div style="font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; line-height: 25px; letter-spacing: 0.2px;">Sale</div>
+          <div style="margin: -8px 37px 0px 2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 57px; background-position-y: 45px; transform: rotate(90deg);"></div>
+        </div>
+        <div style="display: flex">
+          <div style="font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; line-height: 25px; letter-spacing: 0.2px;">Pharmacy</div>
+          <div style="margin: -8px 37px 0px 2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 57px; background-position-y: 45px; transform: rotate(90deg);"></div>
+        </div>
+        <div style="display: flex">
+          <div style="font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; line-height: 25px; letter-spacing: 0.2px;">Local Services</div>
+          <div style="margin: -8px 0px 0px 2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 57px; background-position-y: 45px; transform: rotate(90deg);"></div>
+        </div>
+      </div>
+      <div style="display: flex; margin-right: 20px;">
+        <div style="margin: 1px 3px 0px 0px; float: right; height: 20px; width: 20px; background-image: url('NavBar.png'); background-position-x: 245px; background-position-y: -11px;"></div>
+        <div style="margin: 0px 0px 5px 1px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: -5px; background-position-y: -10px;"></div>
+      </div>
+    </div>
+    <!-- rgba(0, 0, 0, 0.1) 0px 2px 5px 0px; -->
     <div id="nav-bar" style="display: flex; flex-direction: column; margin: 20px 0px 0px 0px;">
       <div style="display: flex;">
         <div style="width: 21.3%"> </div>
         <div style="display: flex; flex-direction: column;">
-          <div id="nav-bar-upper" style="display: flex; margin: 0px 0px 0px -20px;">
-            <div style="margin: 0px 39px 0px 0px ; height: 40px; width: 220px; background-image: url('NavBar.png'); background-position-x: 17px; background-position-y: 55px;"></div>
-            <div style="margin-right: 159px; background-color: rgb(244, 246, 246); border-style: solid; border-width: 1px; border-color: rgb(142, 157, 162); display: flex; width: 400px; height: 24px; padding: 10px;">
+          <div id="nav-bar-upper" style="display: flex; margin: 0px 0px 0px 0px;">
+            <img src="https://www.petco.com/wcsstore/PetcoStore/img/brand-logo.png" style="margin: 0px 42px 0px 45.5px; height: 41px; width: 182px;"></img>
+            <!-- <div style="margin: 0px 39px 0px 0px ; height: 40px; width: 220px; background-image: url('NavBar.png'); background-position-x: 17px; background-position-y: 55px;"></div> -->
+            <div style="margin-right: 161.5px; background-color: rgb(244, 246, 246); border-style: solid; border-width: 1px; border-color: rgb(142, 157, 162); display: flex; width: 400px; height: 24px; padding: 10px;">
               <input style="margin: 0px auto 0px -2px; width: 200px; font-family: Arial; font-size: 15px; font-weight: 700; color: rgb(0, 0, 0); border: 0px; background-color: inherit;" placeholder="You search, we'll fetch..."></input>
               <div style="margin: 1px 3px 0px 0px; float: right; height: 20px; width: 20px; background-image: url('NavBar.png'); background-position-x: 245px; background-position-y: -11px;"></div>
             </div>
-            <div style="display: flex; float: right;">
-              <div style="margin: 0px 0px 0px 10px; padding-right: 13px; display: flex; flex-direction: column; align-items: center; border-style: solid; border-color: rgb(169, 181, 186); border-width: 0px 1px 0px 0px;">
-                <div style="margin: 0px 0px 5px -2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 35px; background-position-y: -10px;"></div>
-                <div style="margin-left: -2px; padding-left: 1px; font-family: Arial, sans-serif; font-size: 12.1875px; font-weight: 700; color: rgb(51, 51, 51);">Live Help</div>
+            <div style="display: flex; float: right; margin-left: -1px;">
+              <div style="margin: 0px 0px 0px 11px; padding-right: 8px; display: flex; flex-direction: column; border-style: solid; border-color: rgb(169, 181, 186); border-width: 0px 1px 0px 0px;">
+                <div style="margin: 0px 0px 5px 10.5px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 35px; background-position-y: -10px;"></div>
+                <div style="margin-left: -4.5px; padding-left: 1px; width: 60px; font-family: Arial, sans-serif; font-size: 12.1875px; font-weight: 700; color: rgb(51, 51, 51);">Live Help</div>
               </div>
-              <div style="margin: 0px 0px 0px 11px; padding-right: 14px; display:  flex; flex-direction: column; align-items: center; border-style: solid; border-color: rgb(169, 181, 186); border-width: 0px 1px 0px 0px;">
-                <div style="margin: 0px 0px 5px 9px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 175px; background-position-y: -10px;"></div>
+              <div style="margin: 0px 0px 0px 10px; padding-right: 14px; display: flex; flex-direction: column; border-style: solid; border-color: rgb(169, 181, 186); border-width: 0px 1px 0px 0px;">
+                <div style="margin: 0px 0px 5px 11px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 175px; background-position-y: -10px;"></div>
                 <div style="margin-left: 0px; font-family: Arial, sans-serif; font-size: 12.1875px; font-weight: 700; color: rgb(51, 51, 51);">Stores</div>
               </div>
-              <div style="margin: 0px 0px 0px 10px; padding-right: 15px; display: flex; flex-direction: column; align-items: center; border-style: solid; border-color: rgb(169, 181, 186); border-width: 0px 1px 0px 0px;">
-                <div style="margin: 0px 0px 5px 2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 107px; background-position-y: -10px;"></div>
-                <div style="margin-right: -1px; font-family: Arial, sans-serif; font-size: 12.1875px; font-weight: 700; color: rgb(51, 51, 51);">Account</div>
+              <div style="margin: 0px 0px 0px 10px; padding-right: 14px; display: flex; flex-direction: column; border-style: solid; border-color: rgb(169, 181, 186); border-width: 0px 1px 0px 0px;">
+                <div style="margin: 0px 0px 5px 13px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 107px; background-position-y: -10px;"></div>
+                <div style="margin-right: 0px; font-family: Arial, sans-serif; font-size: 12.1875px; font-weight: 700; color: rgb(51, 51, 51);">Account</div>
               </div>
-              <div style="margin: 0px 0px 0px 10px; display: flex; flex-direction: column; align-items: center;">
+              <div style="margin: 0px 0px 0px 10px; display: flex; flex-direction: column;">
                 <div style="margin: 0px 0px 5px 1px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: -5px; background-position-y: -10px;"></div>
-                <div style="margin-left: -1px; font-family: Arial, sans-serif; font-size: 12.1875px; font-weight: 700; color: rgb(51, 51, 51);">Cart</div>
+                <div style="margin-left: 0.5px; font-family: Arial, sans-serif; font-size: 12.1875px; font-weight: 700; color: rgb(51, 51, 51);">Cart</div>
               </div>
             </div>
           </div>
           <div id="nav-bar-middle" style="display: flex; margin: 35px 0px 0px 0px;">
-            <div style="display: flex; margin: 1px auto 0px 15px;">
+            <div style="display: flex; margin: 1px auto 0px 45.5px;">
               <div style="display: flex; margin: -1px 0px 0px 0px;">
                 <div style="font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; line-height: 25px; letter-spacing: 0.2px;">Shop by Pet</div>
                 <div style="margin: -8px 37px 0px 2px; height: 25px; width: 25px; background-image: url('NavBar.png'); background-position-x: 57px; background-position-y: 45px; transform: rotate(90deg);"></div>
@@ -77,12 +109,12 @@
         </div>
         <div style="width: 21.3%"> </div>
       </div>
-      <div id="nav-bar-lower" style="display: flex; justify-content: center; align-items: center; background-color: rgb(224, 41, 36); margin: 15px 0px 0px -8px; width: 1930px; height: 39px;">
+      <div id="nav-bar-lower" style="display: flex; justify-content: center; align-items: center; background-color: rgb(224, 41, 36); margin: 15px 0px 0px 14px; width: 1930px; height: 39px;">
         <div style="line-height: 15px; font-size: 15px; color: white; font-family: Arial, sans-serif;">10% off when you buy online & pick up in-store!</div>
         <div style="line-height: 15px; font-size: 15px; color: white; font-family: Arial, sans-serif; margin-left: 10px; font-weight: 700;">+</div>
         <div style="color: rgb(224, 41, 36); margin-left: 19px;">s</div>
       </div>
-      <div style="margin: 4px 0px 0px 419px; display: flex; font-size: 12.1875px; color: rgb(0, 88, 145); font-weight: 700; font-family: Arial, sans-serif;">
+      <div style="margin: 4px 0px 0px 441px; display: flex; font-size: 12.1875px; color: rgb(0, 88, 145); font-weight: 700; font-family: Arial, sans-serif;">
         <div>Home</div>
         <div style="margin: -1px 1px 0px 7px; height: 20px; width: 10px; background-image: url('NavBar.png'); background-position-x: 43px; background-position-y: 20px;"></div>
         <div>Cat</div>
