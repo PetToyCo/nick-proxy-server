@@ -5,6 +5,16 @@ const morgan = require('morgan');
 const server = express();
 
 server.use(morgan('dev'));
+
+server.use('/', function (req, res, next) {
+  const { url } = req;
+
+  if (!url.includes('.png') && !url.includes('.ico') && !url.includes('averageReviews') && !url.includes('reviews')) {
+    res.set('Content-Encoding', 'gzip');
+  }
+  next();
+});
+
 server.use(serveStatic('./client/'));
 
 server.get('/product', (req, res) => {
