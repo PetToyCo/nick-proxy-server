@@ -1,5 +1,5 @@
 # Proxy-Server-Nick
-Handles all reviews and review-related visuals for PetToyCo
+ A proxy server for PetToyCo that relies on the six services listed in "Related Projects"
 
 ## Related Projects
 
@@ -8,7 +8,7 @@ Handles all reviews and review-related visuals for PetToyCo
   - https://github.com/PetToyCo/mainTitle_price
   - https://github.com/PetToyCo/reviews
   - https://github.com/PetToyCo/ProductRecommendations
-  - https://github.com/PetToyCo/repo
+  - https://github.com/PetToyCo/deliver-pickup
 
 ## Table of Contents
 
@@ -20,12 +20,13 @@ Handles all reviews and review-related visuals for PetToyCo
 
 To use this proxy server:
 
-1. Download each of the above repos (in the section "Related Projects". Each repo represents a service to this proxy) into its own unique directory. Then follow the instructions in each ReadMe - for each service - for how to seed a MongoDB instance running on your computer, with data. Also, follow the instructions for starting each of the service's servers.
-2. Then start the proxy's server by making the proxy's root directory the cd in terminal and running >npm run server
-3. Visit any page that follows the form:
+1. From project's root directory, >npm install
+2. Download each of the above repos (in the section "Related Projects". Each repo represents a service to this proxy) into its own unique directory. Then follow the instructions in each ReadMe - for each service - for how to seed a MongoDB instance running on your computer, with data. Also, follow the instructions for starting each of the service's servers.
+3. Then start the proxy's server by making the proxy's root directory the cd in terminal and running >npm run server
+4. Visit any page that follows the form:
 http://127.0.0.1:3000/product?itemID='value 100 to 199 without the quotes'
 
-4. To run the tests, visit the following link (after following the special note below):
+5. To run the tests, visit the following link (after following the special note below):
 http://127.0.0.1:3000/SpecRunner.html
 NOTE: as the page that loads tells you, you have to wait before the tests will run. This is to give the embedded iframe the chance to load the proxy's html file, followed by that html file sending out get requests for the service components, followed by those components sending out requests for data.
 5. See section below on deployment, if you want to deploy the proxy server.
@@ -66,7 +67,7 @@ For each variable, you replace all the [ ] brackets and everything inside them w
 >chmod 700 ./bashScripts/bashScript2.sh
 >chmod 700 ./bashScripts/bashScript3.sh
 
-You do not need to do this with the las three files since you won't be executing them directly. 
+You do not need to do this with the last three files since you won't be executing them directly. 
 
 6. Now follow this process to deploy:
 - Make sure all IP addresses and script tags are accurate(see step 2 above)
@@ -84,7 +85,7 @@ You do not need to do this with the las three files since you won't be executing
 
 
 Manual Deployment Instructions
-1. In client/index.html, at the bottom is all the script tags used to fetch bundles from the six services this proxy server relies on. In development mode, these all read 127.0.0.1. Once all the deployment servers have been launched, you can change these to their actual IP addresses. Don't worry. Just above the script tags are commented-out duplicates with the 127.0.0.1 address, allowing quick and easy switching back to development mode. NOTE: there is a also CSS links tag on line 13 and 15 that need IP address changes, too.
+1. In client/index.html, at the bottom is all the script tags used to fetch bundles from the six services this proxy server relies on. In development mode, these all read 127.0.0.1. Once all the deployment servers have been launched, you can change these to their actual IP addresses. Don't worry. Just above the script tags are commented-out duplicates with the 127.0.0.1 address, allowing quick and easy switching back to development mode. NOTE: there are also CSS link tags on line 13 and 15 that need IP address changes, too.
 2. Once all changes to IP addresses have been made and saved, build the image with >docker build -t "name of image, without quotes". If you want to assign a tag, don't forget :tagName after the image name. If you don't supply the tag name, :latest will be automatically appended. I currently use proxy-server-nick as my image name.
 3. If not already done so, create account at hub.docker.com and login. Then create a public repo. The name of the repo I currently use is fec-proxy-server-nick.
 4. In terminal, you can directly login into your Docker Hub account with >docker login --username="your username, without quotes". When prompted, enter your password.
