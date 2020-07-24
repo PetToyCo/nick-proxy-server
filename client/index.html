@@ -8,11 +8,11 @@
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
     <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js"></script>
     <script crossorigin src="https://momentjs.com/downloads/moment.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="http://18.224.229.28:3003/style.css"></link> -->
-    <link rel="stylesheet" href="http://127.0.0.1:3003/style.css"></link>
-    <!-- <link rel="stylesheet" href="http://18.224.229.28:3006/style.css"></link> -->
-    <link rel="stylesheet" href="http://localhost:3006/style.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" async>
+    <!-- <link rel="stylesheet" href="http://18.224.229.28:3003/style.css" async></link> -->
+    <link rel="stylesheet" href="http://127.0.0.1:3003/style.css" async></link>
+    <!-- <link rel="stylesheet" href="http://18.224.229.28:3006/style.css" async></link> -->
+    <link rel="stylesheet" href="http://localhost:3006/style.css" async></link>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -22,7 +22,7 @@
     ></div>
     <div id="pop-up-mini-nav-bar" style="visibility: hidden; margin: 0px 0px 0px -10px; top: 0px; width: 1940px; height: 54px; position: fixed; display: flex; z-index: 50; background-color: white; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px 0px;">
       <div style="display: flex; margin: 20px 20px 0px 0px;">
-        <img src="https://www.petco.com/wcsstore/PetcoStore/img/brand-logo.png" style="margin: -8.5px 51px 0px 417px; height: 33px; width: 150px;"></img>
+        <img id="mini-nav-logo" src="https://www.petco.com/wcsstore/PetcoStore/img/brand-logo.png" style="margin: -8.5px 51.5px 0px 417px; height: 33px; width: 150px;"></img>
         <!-- <div style="margin: 0px 39px 0px 0px; height: 40px; width: 220px; background-image: url('NavBar.png'); background-position-x: 17px; background-position-y: 55px;"></div> -->
         <div style="display: flex; margin: -4px 0px 0px -0.5px;">
           <div style="display: flex; margin: -1px 0px 0px 0px;">
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-      <div style="display: flex; margin: 14px 0px 0px 92px;">
+      <div style="display: flex; margin: 14px 0px 0px 92.5px;">
         <div style="margin: 2px 22px 0px 0px; float: right; height: 20px; width: 20px; background-image: url('NavBar.png'); background-position-x: 245px; background-position-y: -11px;"></div>
         <div style="margin: 0px 0px 5px 1px; height: 25px; width: 35px; background-image: url('NavBar.png'); background-position-x: 0px; background-position-y: -10px;"></div>
       </div>
@@ -144,10 +144,12 @@
       <div style="width: 21.3%;"> </div>
   </body>
 
-  <script>
+  <script async>
     const modalAttachPoint = document.getElementById("MODAL_ATTACH_POINT");
     const navHistory = document.getElementById("nav-history");
     const navBanner = document.getElementById("nav-banner");
+    const miniNav = document.getElementById("pop-up-mini-nav-bar");
+    const miniNavLogo = document.getElementById("mini-nav-logo");
 
     const callback = () => {
       const body = document.body;
@@ -162,9 +164,13 @@
 
       const newNavHistoryMarginLeft = clientWidth / 2 - 486.5;
       const newNavBannerWidth = clientWidth + 33;
+      const newMiniNavWidth = clientWidth + 33;
+      const newMiniNavLogoMarginLeft = clientWidth / 2 - 528;
 
       navHistory.style.marginLeft = `${newNavHistoryMarginLeft}px`
       navBanner.style.width = `${newNavBannerWidth}px`
+      miniNav.style.width = `${newMiniNavWidth}px`
+      miniNavLogo.style.marginLeft = `${newMiniNavLogoMarginLeft}px`
     };
 
     window.addEventListener('resize', callback);
@@ -187,17 +193,17 @@
     })
   </script>
 
-  <script crossorigin src="http://127.0.0.1:3004/app.js" ></script>
-  <script crossorigin src="http://127.0.0.1:3001/app.js" ></script>
-  <script crossorigin src="http://127.0.0.1:3002/bundle.js" ></script>
-  <script crossorigin src="http://127.0.0.1:3003/bundle.js" ></script>
-  <script type="text/javascript" src="http://localhost:3005/bundle.js"></script>
-  <script type="text/javascript" src="http://localhost:3006/bundle.js"></script>
+  <script crossorigin src="http://127.0.0.1:3004/app.js" async></script>
+  <script crossorigin src="http://127.0.0.1:3001/app.js" async></script>
+  <script crossorigin src="http://127.0.0.1:3002/bundle.js" async></script>
+  <script crossorigin src="http://127.0.0.1:3003/bundle.js" async></script>
+  <script type="text/javascript" src="http://localhost:3005/bundle.js" async></script>
+  <script type="text/javascript" src="http://localhost:3006/bundle.js" async></script>
 <!--
-  <script crossorigin src="http://54.183.137.155:3004/app.js" ></script>
-  <script crossorigin src="http://54.183.137.155:3001/app.js" ></script>
-  <script crossorigin src="http://52.14.208.55:3002/bundle.js" ></script>
-  <script crossorigin src="http://18.224.229.28:3003/bundle.js" ></script>
-  <script type="text/javascript" src="http://52.14.208.55:3005/bundle.js"></script>
-  <script type="text/javascript" src="http://18.224.229.28:3006/bundle.js"></script> -->
+  <script crossorigin src="http://54.183.137.155:3004/app.js" async></script>
+  <script crossorigin src="http://54.183.137.155:3001/app.js" async></script>
+  <script crossorigin src="http://52.14.208.55:3002/bundle.js" async></script>
+  <script crossorigin src="http://18.224.229.28:3003/bundle.js" async></script>
+  <script type="text/javascript" src="http://52.14.208.55:3005/bundle.js" async></script>
+  <script type="text/javascript" src="http://18.224.229.28:3006/bundle.js" async></script> -->
 </html>
