@@ -113,12 +113,12 @@
         </div>
         <div style="width: 21.3%"> </div>
       </div>
-      <div id="nav-bar-lower" style="display: flex; justify-content: center; align-items: center; background-color: rgb(224, 41, 36); margin: 15px 0px 0px 14px; width: 1922px; height: 39px;">
+      <div id="nav-banner" style="display: flex; justify-content: center; align-items: center; background-color: rgb(224, 41, 36); margin: 15px 0px 0px 14px; width: 1922px; height: 39px;">
         <div style="margin-left: 42px;line-height: 15px; font-size: 15px; color: white; font-family: Arial, sans-serif;">10% off when you buy online & pick up in-store!</div>
         <div style="line-height: 15px; font-size: 15px; color: white; font-family: Arial, sans-serif; margin-left: 10px; font-weight: 700;">+</div>
         <div style="color: rgb(224, 41, 36); margin-left: 19px;">s</div>
       </div>
-      <div style="margin: 4px 0px 0px 458px; display: flex; font-size: 12.1875px; color: rgb(0, 88, 145); font-weight: 700; font-family: Arial, sans-serif;">
+      <div id='nav-history' style="margin: 4px 0px 0px 0px; display: flex; font-size: 12.1875px; color: rgb(0, 88, 145); font-weight: 700; font-family: Arial, sans-serif;">
         <div>Home</div>
         <div style="margin: -1px 1px 0px 7px; height: 20px; width: 10px; background-image: url('NavBar.png'); background-position-x: 43px; background-position-y: 20px;"></div>
         <div>Cat</div>
@@ -145,16 +145,26 @@
   </body>
 
   <script>
-    const callback = function() {
+    const modalAttachPoint = document.getElementById("MODAL_ATTACH_POINT");
+    const navHistory = document.getElementById("nav-history");
+    const navBanner = document.getElementById("nav-banner");
+
+    const callback = () => {
       const body = document.body;
+
+      const clientWidth = body.clientWidth;
 
       let height = body.scrollHeight + 40;
       let width = body.scrollWidth + 40;
 
-      const modalAttachPoint = document.getElementById("MODAL_ATTACH_POINT");
-
       modalAttachPoint.style.height = `${height}px`;
       modalAttachPoint.style.width = `${width}px`;
+
+      const newNavHistoryMarginLeft = clientWidth / 2 - 486.5;
+      const newNavBannerWidth = clientWidth + 33;
+
+      navHistory.style.marginLeft = `${newNavHistoryMarginLeft}px`
+      navBanner.style.width = `${newNavBannerWidth}px`
     };
 
     window.addEventListener('resize', callback);
