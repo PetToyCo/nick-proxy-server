@@ -2,18 +2,13 @@
 <html>
   <head>
     <title>A PetToyCo proxy server - Nick</title>
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js"></script>
-    <script crossorigin src="https://momentjs.com/downloads/moment.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" async>
-    <!-- <link rel="stylesheet" href="http://18.224.229.28:3003/style.css" async></link> -->
-    <link rel="stylesheet" href="http://127.0.0.1:3003/style.css" async></link>
-    <!-- <link rel="stylesheet" href="http://18.224.229.28:3006/style.css" async></link> -->
-    <link rel="stylesheet" href="http://localhost:3006/style.css" async></link>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js" defer></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" defer></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" defer></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js" defer></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.0/react-redux.min.js" defer></script>
+    <script crossorigin src="https://momentjs.com/downloads/moment.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous" defer></script>
   </head>
   <body>
     <div
@@ -193,17 +188,52 @@
     })
   </script>
 
-  <script crossorigin src="http://127.0.0.1:3004/app.js" async></script>
-  <script crossorigin src="http://127.0.0.1:3001/app.js" async></script>
-  <script crossorigin src="http://127.0.0.1:3002/bundle.js" async></script>
-  <script crossorigin src="http://127.0.0.1:3003/bundle.js" async></script>
-  <script type="text/javascript" src="http://localhost:3005/bundle.js" async></script>
-  <script type="text/javascript" src="http://localhost:3006/bundle.js" async></script>
-<!--
-  <script crossorigin src="http://54.183.137.155:3004/app.js" async></script>
-  <script crossorigin src="http://54.183.137.155:3001/app.js" async></script>
-  <script crossorigin src="http://52.14.208.55:3002/bundle.js" async></script>
-  <script crossorigin src="http://18.224.229.28:3003/bundle.js" async></script>
-  <script type="text/javascript" src="http://52.14.208.55:3005/bundle.js" async></script>
-  <script type="text/javascript" src="http://18.224.229.28:3006/bundle.js" async></script> -->
+  <script async>
+    document.addEventListener('DOMContentLoaded', function() {
+      const N_IP = '127.0.0.1';
+      const E_IP = '127.0.0.1';
+      const K_IP = '127.0.0.1';
+
+      // const N_IP = '54.183.137.155';
+      // const E_IP = '52.14.208.55';
+      // const K_IP = '18.224.229.28';
+
+      axios.get(`http://${E_IP}:3005/bundle.js`)
+        .then((response) => {
+          eval(response.data)
+        })
+
+      axios.get(`http://${K_IP}:3006/bundle.js`)
+        .then((response) => {
+          eval(response.data)
+        })
+
+      axios.get(`http://${E_IP}:3002/bundle.js`)
+      .then((response) => {
+        eval(response.data)
+      })
+
+      axios.get(`http://${K_IP}:3003/bundle.js`)
+        .then((response) => {
+          eval(response.data)
+        })
+
+      axios.get(`http://${N_IP}:3001/app.js`)
+        .then((response) => {
+          eval(response.data)
+        })
+
+      axios.get(`http://${N_IP}:3004/app.js`)
+      .then((response) => {
+        eval(response.data)
+      })
+    })
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" async>
+ <!-- <link rel="stylesheet" href="http://18.224.229.28:3003/style.css" async></link> -->
+ <link rel="stylesheet" href="http://127.0.0.1:3003/style.css" async></link>
+ <!-- <link rel="stylesheet" href="http://18.224.229.28:3006/style.css" async></link> -->
+ <link rel="stylesheet" href="http://localhost:3006/style.css" async></link>
 </html>
